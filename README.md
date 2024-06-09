@@ -26,7 +26,7 @@ Sigue estos pasos para configurar el proyecto en tu entorno local:
 1. Clona el repositorio:
    ```bash
    git clone https://github.com/
-   cd AGRO_S.M.S
+   cd BOTADELGIGANTE_0002
    ```
 
 2. Instala las dependencias de PHP y JavaScript:
@@ -46,7 +46,7 @@ Sigue estos pasos para configurar el proyecto en tu entorno local:
    DB_CONNECTION=mysql
    DB_HOST=127.0.0.1
    DB_PORT=3306
-   DB_DATABASE=agrosms
+   DB_DATABASE=botagigante
    DB_USERNAME=tu_usuario
    DB_PASSWORD=tu_contraseña
    ```
