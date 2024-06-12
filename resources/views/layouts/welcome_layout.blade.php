@@ -33,7 +33,7 @@
 
         /* Colores predeterminados */
         :root {
-            --bg-color: rgb(0, 0, 0, 0.3);
+            --bg-color: white;
             --font-color: #fff;
             --secondary-bg-color: #9b5f1b;
         }
