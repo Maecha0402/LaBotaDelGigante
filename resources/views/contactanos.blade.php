@@ -107,10 +107,10 @@
         
         <h3>Redes Sociales</h3>
         <div class="social-icons">
-            <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://web.whatsapp.com/" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/labotadelgigante/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100092304243279" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.tiktok.com/@labotadelgigante" target="_blank"><i class="fab fa-tiktok"></i></a>
         </div>
         
         <h3>Teléfono</h3>

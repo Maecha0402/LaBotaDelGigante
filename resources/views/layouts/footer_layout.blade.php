@@ -21,9 +21,9 @@
                 </ul>
                 <p>&copy; 2024 La Bota Del Gigante. Todos los derechos reservados.</p>
                 <ul class="list-inline">
-                    <li class="list-inline-item"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                    <li class="list-inline-item"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li class="list-inline-item"><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.facebook.com/profile.php?id=100092304243279"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.instagram.com/labotadelgigante/"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li class="list-inline-item"><a href="https://web.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i></a></li>
                 </ul>
             </div>
         </div>
