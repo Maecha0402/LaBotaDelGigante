@@ -6,6 +6,13 @@
     body {
         font-family: 'Arial', sans-serif;
     }
+    /* Logo */
+    .logo {
+        max-width: 200px;
+        background-image: url('images/logotipo sinfondo.png');
+        margin-bottom: 20px;
+        transition: 0.5s ease;
+    }
     .container {
         margin-top: 50px;
         padding: 60px;

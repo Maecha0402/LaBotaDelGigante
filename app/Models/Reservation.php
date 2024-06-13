@@ -20,7 +20,7 @@ class Reservation extends Model
         'arrival_time',
         'departure_date',
         'special_request',
-        'status',
+        'status'
     ];
 
     public function user()

@@ -1,5 +1,8 @@
 @extends('layouts.welcome_layout')
 
+<!-- CDN de Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 <header class="cabanas-header">
     <h1>Cabañas</h1>
 </header>
@@ -126,27 +129,8 @@
         </div>
     </div>
 </section>
-<!-- Pie de página -->
-<footer class="footer text-center">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <ul class="list-inline">
-                    <li class="list-inline-item"><a href="{{url('/')}}">Inicio</a></li>
-                    <li class="list-inline-item"><a href="{{url('/biblioteca')}}">Cabañas</a></li>
-                    <li class="list-inline-item"><a href="{{url('/nosotros')}}">Galería</a></li>
-                    <li class="list-inline-item"><a href="{{url('/contactanos')}}">Contactos</a></li>
-                </ul>
-                <p>&copy; 2024 La Bota Del Gigante. Todos los derechos reservados.</p>
-                <ul class="list-inline">
-                    <li class="list-inline-item"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                    <li class="list-inline-item"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li class="list-inline-item"><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</footer>
+
+@include('layouts.footer_layout')
 
 
 

@@ -247,10 +247,27 @@
         .bot-color {
             color: #ffffff;
             background-color: #975811;
+            border-radius: 18px;
         }
+
         .bot-color:hover {
             color: #ffffff;
+            background-color: #322100;
+            border-radius: 13px;
+        }
+        .bot-login {
+            color: #ffffff;
             background-color: #975811;
+            margin-left: 20px;
+            border-radius: 18px;
+        }
+        .bot-login:hover {
+            color: #ffffff;
+            background-color: #322100;
+            transform: scale(1.1);
+            box-shadow: 0 15px 25px rgb(0, 0, 0, 0.2);
+            transform: transition(3s) ;
+            border-radius: 13px;
         }
         /* Toggle del menú */
         .menu-toggle {
@@ -343,7 +360,7 @@
                     <a class="nav-link bot-color" href="{{ url('reservations/create') }}">Hacer Reservacion</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link bg bg-primary" href="{{ url('/login') }}">Login</a>
+                    <a class="nav-link bot-login" href="{{ url('/login') }}">Login</a>
                 </li>
                 <!-- <li><a href="{{ route('reservations.index') }}">Mis Reservaciones</a></li>
                 <li><a href="{{ route('reservations.create') }}">Crear Reservación</a></li> -->

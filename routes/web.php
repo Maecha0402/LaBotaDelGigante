@@ -10,10 +10,10 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\RoomController;
 use App\Http\Controllers\ReservationController;
 
-Route::resource('reservations', ReservationController::class);
-Route::resource('reservations', ReservationController::class)->except(['create', 'store']);
+// Rutas de reservaciones
 Route::get('reservations/create', [ReservationController::class, 'create'])->name('reservations.create');
 Route::post('reservations', [ReservationController::class, 'store'])->name('reservations.store');
+Route::resource('reservations', ReservationController::class)->except(['create', 'store']);
 
 Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::resource('rooms', RoomController::class);
@@ -23,7 +23,6 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
 Route::get('/biblioteca', [PlantController::class, 'search'])->name('biblioteca');
 Route::get('/buscar', [SearchController::class, 'search'])->name('search');
 Route::get('/search', [PlantController::class, 'search'])->name('plants.search');
-Route::get('/search', [SearchController::class, 'search'])->name('search');
 
 Route::get('/', function () {
     return view('welcome');

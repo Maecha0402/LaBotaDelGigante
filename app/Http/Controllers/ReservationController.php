@@ -25,6 +25,7 @@ class ReservationController extends Controller
     // Almacenar una nueva reservación
     public function store(Request $request)
     {
+        // Validar los datos del formulario
         $request->validate([
             'room_id' => 'required|exists:rooms,id',
             'first_name' => 'required|string|max:255',
@@ -37,11 +38,14 @@ class ReservationController extends Controller
             'special_request' => 'nullable|string',
         ]);
 
+        // Agregar estado por defecto
         $data = $request->all();
         $data['status'] = 'active';
 
+        // Crear una nueva reservación
         Reservation::create($data);
 
+        // Redirigir a la página de inicio con un mensaje de éxito
         return redirect()->route('home')->with('success', 'Reservación creada con éxito.');
     }
 
@@ -65,6 +69,7 @@ class ReservationController extends Controller
     {
         $reservation = Reservation::findOrFail($id);
 
+        // Validar los datos del formulario
         $request->validate([
             'room_id' => 'required|exists:rooms,id',
             'first_name' => 'required|string|max:255',
@@ -77,8 +82,10 @@ class ReservationController extends Controller
             'special_request' => 'nullable|string',
         ]);
 
+        // Actualizar la reservación
         $reservation->update($request->all());
 
+        // Redirigir a la lista de reservaciones con un mensaje de éxito
         return redirect()->route('reservations.index')->with('success', 'Reservación actualizada con éxito.');
     }
 
