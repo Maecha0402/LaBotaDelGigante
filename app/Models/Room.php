@@ -17,6 +17,7 @@ class Room extends Model
         'image1',
         'image2',
         'image3',
+        'status', // Agregar este campo
     ];
 
     protected $casts = [
@@ -28,4 +29,5 @@ class Room extends Model
         return $this->hasMany(Reservation::class);
     }
 }
+
 

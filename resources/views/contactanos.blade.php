@@ -1,5 +1,7 @@
 @extends('layouts.welcome_layout')
 
+<!-- CDN de Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 <style>
     body {
@@ -62,10 +64,10 @@
         font-size: 24px;
         color: #333;
         transition: color 0.3s ease, transform 0.3s ease;
+        transform: translateX(-320px);
     }
     .social-icons a:hover {
         color: #975811;
-        transform: scale(1.2);
     }
     .contact-info .contact-method {
         display: flex;
@@ -127,13 +129,7 @@
     </div>
 </section>
 
-<footer class="footer">
-    <p>&copy; 2024 La Bota Del Gigante. Todos los derechos reservados.</p>
-    <a href="#">Inicio</a>
-    <a href="#">Cabañas</a>
-    <a href="#">Galería</a>
-    <a href="#">Contáctanos</a>
-</footer>
+@include('layouts.footer_layout')
 
 
 
