@@ -38,12 +38,31 @@ class ReservationController extends Controller
             'special_request' => 'nullable|string',
         ]);
 
-        // Agregar estado por defecto
-        $data = $request->all();
-        $data['status'] = 'active';
+        // Comprobar el estado de la habitación
+        $room = Room::find($request->room_id);
+        if ($room->status == 'inactive') {
+            return redirect()->back()->withErrors('La habitación seleccionada no está disponible.');
+        }
+
+        // Comprobar conflictos de reservación
+        $conflict = Reservation::where('room_id', $request->room_id)
+            ->where(function ($query) use ($request) {
+                $query->where('arrival_date', '<=', $request->departure_date)
+                    ->where('departure_date', '>=', $request->arrival_date);
+            })->exists();
+
+        if ($conflict) {
+            return redirect()->back()->withErrors('La habitación ya está reservada para el período seleccionado.');
+        }
 
         // Crear una nueva reservación
+        $data = $request->all();
+        $data['status'] = 'active';
         Reservation::create($data);
+
+        // Marcar la habitación como inactiva
+        $room->status = 'inactive';
+        $room->save();
 
         // Redirigir a la página de inicio con un mensaje de éxito
         return redirect()->route('home')->with('success', 'Reservación creada con éxito.');

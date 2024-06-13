@@ -10,10 +10,14 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\RoomController;
 use App\Http\Controllers\ReservationController;
 
+// ruta para verificar el estado de cada habitacion
+Route::post('reservations', [ReservationController::class, 'store'])->middleware('check.room.status');
+
+Route::resource('reservations', ReservationController::class);
 // Rutas de reservaciones
-Route::get('reservations/create', [ReservationController::class, 'create'])->name('reservations.create');
-Route::post('reservations', [ReservationController::class, 'store'])->name('reservations.store');
-Route::resource('reservations', ReservationController::class)->except(['create', 'store']);
+// Route::get('reservations/create', [ReservationController::class, 'create'])->name('reservations.create');
+// Route::post('reservations', [ReservationController::class, 'store'])->name('reservations.store');
+// Route::resource('reservations', ReservationController::class)->except(['create', 'store']);
 
 Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::resource('rooms', RoomController::class);
