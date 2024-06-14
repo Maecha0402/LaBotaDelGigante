@@ -49,7 +49,9 @@ Route::get('/search', [PlantController::class, 'search'])->name('plants.search')
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('viewscabañas/santodomingo', function () {
+    return view('viewscabañas/santodomingo');
+});
 Route::get('/biblioteca', function () {
     return view('biblioteca');
 });

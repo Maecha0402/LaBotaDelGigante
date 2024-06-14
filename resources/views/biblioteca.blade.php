@@ -93,7 +93,7 @@
                 <div class="cabana-content">
                     <h5>Suite Santo Domingo</h5>
                     <p>Disfruta de una estadía placentera en nuestra Suite Santo Domingo, vista la montaña con mucha magia y amor para ti.</p>
-                    <a href="#" class="btn btn-primary">Ver Más</a>
+                    <a href="{{ url('viewscabañas/santodomingo') }}" class="btn btn-primary">Ver Más</a>
                 </div>
             </div>
         </div>

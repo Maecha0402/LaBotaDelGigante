@@ -1,9 +1,5 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Boca del Gigante</title>
+@extends('layouts.welcome_layout')
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -16,6 +12,7 @@
         }
         .section {
             width: 30%;
+            color: black;
         }
         .section img {
             width: 100%;
@@ -48,11 +45,10 @@
             background-color: #A0522D;
         }
     </style>
-</head>
-<body>
+
     <div class="container">
         <div class="section">
-            <img src="ruta/a/tu/imagen.jpg" alt="Imagen de la habitación">
+            <img src="images/habi-santo.png" alt="Imagen de la habitación">
         </div>
         <div class="section">
             <h2>INCLUYE</h2>
@@ -86,8 +82,8 @@
                 <li>Decoración</li>
                 <li>Mini Bar</li>
             </ul>
-            <a href="{{ route('viewscabañas.santodomingo') }}" class="button">VER MAS</a>
+            <a href="" class="button">Regresar</a>
         </div>
     </div>
-</body>
-</html>
+
+@include('layouts.footer_layout')
