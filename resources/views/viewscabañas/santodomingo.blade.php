@@ -48,7 +48,7 @@
 
     <div class="container">
         <div class="section">
-            <img src="images/habi-santo.png" alt="Imagen de la habitación">
+            <img src="/images/habi-santo.png" alt="Imagen de la habitación">
         </div>
         <div class="section">
             <h2>INCLUYE</h2>

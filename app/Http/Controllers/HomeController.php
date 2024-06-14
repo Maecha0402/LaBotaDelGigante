@@ -1,8 +1,8 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Reservation;
 
 class HomeController extends Controller
 {
@@ -23,6 +23,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        // Obtener estadísticas básicas
+        $totalReservations = Reservation::count();
+        $activeReservations = Reservation::where('status', 'active')->count();
+        $inactiveReservations = Reservation::where('status', 'inactive')->count();
+        $recentReservations = Reservation::latest()->take(5)->get();
+
+        return view('home', compact('totalReservations', 'activeReservations', 'inactiveReservations', 'recentReservations'));
     }
 }

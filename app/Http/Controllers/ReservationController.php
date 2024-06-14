@@ -65,7 +65,7 @@ class ReservationController extends Controller
         $room->save();
 
         // Redirigir a la página de inicio con un mensaje de éxito
-        return redirect()->route('home')->with('success', 'Reservación creada con éxito.');
+        return redirect()->route('reservations.create')->with('success', 'Reservación creada con éxito.');
     }
 
     // Mostrar una reservación específica
