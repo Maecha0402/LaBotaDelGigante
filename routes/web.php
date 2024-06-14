@@ -9,6 +9,24 @@ use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\RoomController;
 use App\Http\Controllers\ReservationController;
+use App\Http\Controllers\DashboardReservationController;
+
+// Crud de reservaciones desde el dashboard
+Route::prefix('dashboard')->middleware('auth')->group(function () {
+    Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+    Route::resource('reservations', DashboardReservationController::class)->names([
+        'index' => 'dashboard.reservations.index',
+        'create' => 'dashboard.reservations.create',
+        'store' => 'dashboard.reservations.store',
+        'show' => 'dashboard.reservations.show',
+        'edit' => 'dashboard.reservations.edit',
+        'update' => 'dashboard.reservations.update',
+        'destroy' => 'dashboard.reservations.destroy',
+    ]);
+});
+
+// Activar habitacion
+Route::patch('/rooms/{id}/activate', [RoomController::class, 'activate'])->name('rooms.activate');
 
 // ruta para verificar el estado de cada habitacion
 Route::post('reservations', [ReservationController::class, 'store'])->middleware('check.room.status');

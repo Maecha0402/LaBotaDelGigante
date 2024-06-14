@@ -7,7 +7,16 @@ use App\Models\Room;
 use Illuminate\Support\Facades\Storage;
 
 class RoomController extends Controller
-{
+{   
+    // Activar la habitacion 
+    public function activate($id)
+    {
+    $room = Room::findOrFail($id);
+    $room->status = 'active';
+    $room->save();
+
+    return redirect()->route('rooms.index')->with('success', 'Habitación activada con éxito.');
+    }
     // Aplicar middleware auth para todas las rutas en este controlador
     public function __construct()
     {

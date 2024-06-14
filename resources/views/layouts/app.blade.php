@@ -188,6 +188,16 @@
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="{{ route('dashboard.reservations.create') }}">
+                                <i class="fa-solid fa-user-plus"></i> <span>Crear Reserva</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('dashboard.reservations.index') }}">
+                                <i class="fa-regular fa-folder-open"></i> <span>Ver Reservas</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="{{ route('config.index') }}">
                                 <i class="fas fa-cogs"></i> <span>Configuración</span>
                             </a>

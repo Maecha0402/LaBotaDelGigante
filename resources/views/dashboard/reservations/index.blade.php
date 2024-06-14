@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <h1>Mis Reservaciones</h1>
+    <h1>Reservaciones Creadas</h1>
     @if(session('success'))
         <div class="alert alert-success">
             {{ session('success') }}
@@ -16,6 +16,7 @@
                 <th>Fecha de Llegada</th>
                 <th>Fecha de Salida</th>
                 <th>Estado</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -26,6 +27,14 @@
                     <td>{{ $reservation->arrival_date }}</td>
                     <td>{{ $reservation->departure_date }}</td>
                     <td>{{ $reservation->status }}</td>
+                    <td>
+                        <a href="{{ route('dashboard.reservations.edit', $reservation->id) }}" class="btn btn-primary btn-sm">Editar</a>
+                        <form action="{{ route('dashboard.reservations.destroy', $reservation->id) }}" method="POST" style="display:inline;">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                        </form>
+                    </td>
                 </tr>
             @endforeach
         </tbody>

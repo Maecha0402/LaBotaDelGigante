@@ -1,58 +1,8 @@
-@extends('layouts.welcome_layout')
+@extends('layouts.app')
 
 @section('content')
-
-<style>
-    body {
-        font-family: 'Arial', sans-serif;
-    }
-    .container {
-        margin-top: 100px; /* Ajustar margen superior para evitar la barra de navegación */
-        padding: 40px;
-        background-color: #fff7e6;
-        border-radius: 15px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-    .container h1 {
-        text-align: center;
-        font-size: 32px;
-        color: #975811;
-        margin-bottom: 30px;
-        padding-bottom: 10px;
-        border-bottom: 2px solid #975811;
-    }
-    .form-group label {
-        font-weight: bold;
-        color: #975811;
-    }
-    .form-control {
-        border-radius: 5px;
-        border: 2px solid #ddd;
-        margin-bottom: 15px;
-    }
-    .form-control:focus {
-        border-color: #975811;
-        box-shadow: none;
-    }
-    .btn-primary {
-        background-color: #975811;
-        border-color: #975811;
-        border-radius: 5px;
-        width: 100%;
-        padding: 10px;
-        font-size: 18px;
-    }
-    .btn-primary:hover {
-        background-color: #80480b;
-        border-color: #80480b;
-    }
-    .alert-danger {
-        margin-bottom: 20px;
-    }
-</style>
-
-<div class="container">
-    <h1>Formulario de Reservas</h1>
+<div class="container mt-5">
+    <h1>Crear Reservación</h1>
     @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
@@ -62,7 +12,7 @@
             </ul>
         </div>
     @endif
-    <form id="reservationForm" action="{{ route('reservations.store') }}" method="POST">
+    <form action="{{ route('dashboard.reservations.store') }}" method="POST">
         @csrf
         <div class="form-group">
             <label for="first_name">Nombre Completo</label>
@@ -73,7 +23,7 @@
             <input type="text" id="last_name" name="last_name" class="form-control" required>
         </div>
         <div class="form-group">
-            <label for="email">Correo Electronico</label>
+            <label for="email">Email</label>
             <input type="email" id="email" name="email" class="form-control" required>
         </div>
         <div class="form-group">
