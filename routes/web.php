@@ -53,7 +53,6 @@ Route::get('/', function () {
 Route::get('viewscabañas/santodomingo', function () {
     return view('viewscabañas/santodomingo');
 });
-
 Route::get('/biblioteca', function () {
     return view('biblioteca');
 });
