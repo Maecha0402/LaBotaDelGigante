@@ -29,6 +29,17 @@
                         <button type="submit" class="btn btn-danger">Eliminar</button>
                     </form>
                 </td>
+                <td>
+                        @if($room->status == 'inactive')
+                            <form action="{{ route('rooms.activate', $room->id) }}" method="POST" style="display:inline;">
+                                @csrf
+                                @method('PATCH')
+                                <button type="submit" class="btn btn-success">Activar</button>
+                            </form>
+                        @else
+                            <span class="badge badge-success">Activa</span>
+                        @endif
+                </td>
             </tr>
             @endforeach
         </tbody>
