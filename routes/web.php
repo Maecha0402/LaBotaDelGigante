@@ -52,6 +52,15 @@ Route::get('/', function () {
 Route::get('viewscabañas/santodomingo', function () {
     return view('viewscabañas/santodomingo');
 });
+Route::get('viewscabañas/mexico', function () {
+    return view('viewscabañas/mexico');
+});
+Route::get('viewscabañas/newyork', function () {
+    return view('viewscabañas/newyork');
+});
+Route::get('viewscabañas/botatexas', function () {
+    return view('viewscabañas/botatexas');
+});
 Route::get('/biblioteca', function () {
     return view('biblioteca');
 });

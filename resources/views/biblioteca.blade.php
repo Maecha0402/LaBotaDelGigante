@@ -103,7 +103,7 @@
                 <div class="cabana-content">
                     <h5>Cabaña Mexico Lindo</h5>
                     <p>No solo las fiestas son temáticas, disfruta de una cabaña adaptada con lo típico de este país tan hermoso México.</p>
-                    <a href="#" class="btn btn-primary">Ver Más</a>
+                    <a href="{{ url('viewscabañas/mexico') }}" class="btn btn-primary">Ver Más</a>
                 </div>
             </div>
         </div>
@@ -113,17 +113,17 @@
                 <div class="cabana-content">
                     <h5>Suite Deluxe New York</h5>
                     <p>Alojamientos con todo el estilo y tematizados para un descanso único.</p>
-                    <a href="#" class="btn btn-primary">Ver Más</a>
+                    <a href="{{ url('viewscabañas/newyork') }}" class="btn btn-primary">Ver Más</a>
                 </div>
             </div>
         </div>
         <div class="col-md-12">
             <div class="cabana-item">
-                <img src="images/cabañas3.png" alt="Camping Bota Texa">
+                <img src="/images/habi-texa.png" alt="Camping Bota Texa">
                 <div class="cabana-content">
                     <h5>Camping Bota Texa</h5>
                     <p>Vive una experiencia única y diferente durmiendo dentro de una bota gigante.</p>
-                    <a href="#" class="btn btn-primary">Ver Más</a>
+                    <a href="{{ url('viewscabañas/botatexas') }}" class="btn btn-primary">Ver Más</a>
                 </div>
             </div>
         </div>
