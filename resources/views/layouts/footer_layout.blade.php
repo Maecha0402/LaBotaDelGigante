@@ -1,4 +1,20 @@
-
+<style>
+    .footer {
+        background-color: #975811;
+        color: white;
+        margin-top: 190px ;
+        text-align: center;
+    }
+    .footer a {
+        color: white;
+        margin: 0 10px;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    .footer a:hover {
+        color: #f0a500;
+    }
+</style>
 <!-- Pie de página -->
 <footer class="footer text-center">
     <div class="container">

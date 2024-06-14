@@ -8,7 +8,7 @@
             display: flex;
             justify-content: space-around;
             align-items: flex-start;
-            padding: 20px;
+            padding-top: 150px;
         }
         .section {
             width: 30%;
@@ -86,4 +86,5 @@
         </div>
     </div>
 
-@include('layouts.footer_layout')
+ @include('layouts.footer_layout')
+
