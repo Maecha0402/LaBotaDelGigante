@@ -67,21 +67,7 @@
         background-color: #824a0b;
         color: white;
     }
-    .footer {
-        background-color: #975811;
-        color: white;
-        padding: 20px 0;
-        text-align: center;
-    }
-    .footer a {
-        color: white;
-        margin: 0 10px;
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
-    .footer a:hover {
-        color: #f0a500;
-    }
+    
 </style>
 
 

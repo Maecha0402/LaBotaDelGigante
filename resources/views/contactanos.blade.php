@@ -79,7 +79,7 @@
         margin-right: 15px;
         color: #975811;
     }
-    .footer {
+    /* .footer {
         background-color: #975811;
         color: white;
         padding: 20px 0;
@@ -93,7 +93,7 @@
     }
     .footer a:hover {
         color: #f0a500;
-    }
+    } */
 </style>
 
 <section class="contact-section container">

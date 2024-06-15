@@ -2,7 +2,7 @@
     .footer {
         background-color: #975811;
         color: white;
-        margin-top: 190px ;
+        padding: 20px 0;
         text-align: center;
     }
     .footer a {

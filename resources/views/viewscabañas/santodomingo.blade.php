@@ -1,5 +1,7 @@
 @extends('layouts.welcome_layout')
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -8,18 +10,20 @@
             display: flex;
             justify-content: space-around;
             align-items: flex-start;
-            padding-top: 150px;
+            
         }
         .section {
             width: 30%;
             color: black;
+            padding-top: 180px;
+            padding-bottom: 50px;
         }
         .section img {
             width: 100%;
             height: auto;
         }
         .section h2 {
-            background-color: #8B4513;
+            background-color: #975811;
             color: white;
             padding: 10px;
             text-align: center;
@@ -35,7 +39,7 @@
             display: block;
             width: 100%;
             text-align: center;
-            background-color: #8B4513;
+            background-color: #975811;
             color: white;
             padding: 10px;
             text-decoration: none;
@@ -82,7 +86,7 @@
                 <li>Decoración</li>
                 <li>Mini Bar</li>
             </ul>
-            <a href="" class="button">Regresar</a>
+            <a href="{{url('/biblioteca')}}" class="button">Regresar</a>
         </div>
     </div>
 

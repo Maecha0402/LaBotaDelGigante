@@ -34,21 +34,7 @@
         object-fit: cover;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
-    .footer {
-        background-color: #975811;
-        color: white;
-        padding: 20px 0;
-        text-align: center;
-    }
-    .footer a {
-        color: white;
-        margin: 0 10px;
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
-    .footer a:hover {
-        color: #f0a500;
-    }
+   
 </style>
 
 <header class="gallery-header">
