@@ -140,7 +140,7 @@
 <div class="container">
   <div class="card">
     <div class="login-box">
-      <img src="images/logotipo sinfondo.png" alt="La Bota del Gigante" class="img-fluid mb-2">
+      <img src="{{ asset('images/logotipo_sinfondo.png') }}" alt="La Bota del Gigante" class="img-fluid mb-2">
       <p>{{ __('Iniciar sesión') }}</p>
       <form method="POST" action="{{ route('login') }}">
         @csrf

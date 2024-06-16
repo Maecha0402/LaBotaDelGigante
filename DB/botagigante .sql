@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-06-2024 a las 22:01:59
+-- Tiempo de generación: 15-06-2024 a las 22:06:22
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -119,7 +119,9 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (4, '2014_10_12_100000_create_password_resets_table', 1),
 (5, '2019_12_14_000001_create_personal_access_tokens_table', 1),
 (6, '2024_06_06_022514_create_rooms_table', 1),
-(7, '2024_06_06_022744_create_reservations_table', 1);
+(7, '2024_06_06_022744_create_reservations_table', 1),
+(8, '2024_06_13_032641_create_reservations_table', 2),
+(9, '2024_06_13_040942_add_status_to_rooms_table', 3);
 
 -- --------------------------------------------------------
 
@@ -160,7 +162,6 @@ CREATE TABLE `personal_access_tokens` (
 
 CREATE TABLE `reservations` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `user_id` bigint(20) UNSIGNED NOT NULL,
   `room_id` bigint(20) UNSIGNED NOT NULL,
   `first_name` varchar(255) NOT NULL,
   `last_name` varchar(255) NOT NULL,
@@ -170,10 +171,20 @@ CREATE TABLE `reservations` (
   `arrival_time` time NOT NULL,
   `departure_date` date NOT NULL,
   `special_request` text DEFAULT NULL,
-  `status` enum('active','inactive') NOT NULL DEFAULT 'active',
+  `status` varchar(255) NOT NULL DEFAULT 'active',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `reservations`
+--
+
+INSERT INTO `reservations` (`id`, `room_id`, `first_name`, `last_name`, `email`, `num_guests`, `arrival_date`, `arrival_time`, `departure_date`, `special_request`, `status`, `created_at`, `updated_at`) VALUES
+(14, 1, 'miguel', 'suarez', 'miguelsuafa@gmail.com', 1, '2024-06-14', '04:43:00', '2024-06-16', NULL, 'active', '2024-06-14 10:43:54', '2024-06-14 10:43:54'),
+(15, 3, 'Katerin', 'Maecha', 'katerin@gmail.com', 1, '2024-06-15', '03:45:00', '2024-06-17', NULL, 'active', '2024-06-14 10:46:04', '2024-06-14 10:46:04'),
+(16, 1, 'miguel', 'suarez', 'miguelsuafa@gmail.com', 3, '2024-06-23', '17:58:00', '2024-06-25', NULL, 'active', '2024-06-16 00:58:41', '2024-06-16 00:58:41'),
+(17, 2, 'carlos', 'gomez', 'carlox@gmail.com', 2, '2024-06-17', '17:03:00', '2024-06-24', NULL, 'active', '2024-06-16 01:03:35', '2024-06-16 01:03:35');
 
 -- --------------------------------------------------------
 
@@ -191,16 +202,18 @@ CREATE TABLE `rooms` (
   `image2` varchar(255) DEFAULT NULL,
   `image3` varchar(255) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `status` varchar(255) NOT NULL DEFAULT 'active'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `rooms`
 --
 
-INSERT INTO `rooms` (`id`, `name`, `description`, `price`, `additional_services`, `image1`, `image2`, `image3`, `created_at`, `updated_at`) VALUES
-(1, 'Suite Santo Domingo', '-Cama Doble\r\n-Sofócame\r\n-Baño Privado\r\n-Wifi-Tv\r\n-Alexa-Karaoque\r\n-Parqueo Privado\r\n-Desayuno\r\n-Botella de Vino\r\n-Zona BBQ\r\n-Piscina Privada\r\n-Malla Cataraman\r\n-Hamaca\r\n-Fogata', 315000.00, '\"-Almuerzo\\r\\n-Cena\\r\\n-Decoracion\\r\\n-Mini Bar\"', '1717658016_campo.jpg', '1717658098_miguel (2).jpg', '1717658098_miguel.jpg', '2024-06-06 11:51:41', '2024-06-07 21:55:29'),
-(2, 'Cabaña Mexico Lindo', 'esta es nueva', 460000.00, '\"reservacion de jacuzzi\"', 'images/image1.jpg', 'images/image2.jpg', 'images/image3.jpg', '2024-06-06 12:06:04', '2024-06-07 21:57:18');
+INSERT INTO `rooms` (`id`, `name`, `description`, `price`, `additional_services`, `image1`, `image2`, `image3`, `created_at`, `updated_at`, `status`) VALUES
+(1, 'Suite Santo Domingo', '-Cama Doble\r\n-Sofócame\r\n-Baño Privado\r\n-Wifi-Tv\r\n-Alexa-Karaoque\r\n-Parqueo Privado\r\n-Desayuno\r\n-Botella de Vino\r\n-Zona BBQ\r\n-Piscina Privada\r\n-Malla Cataraman\r\n-Hamaca\r\n-Fogata', 315000.00, '\"-Almuerzo\\r\\n-Cena\\r\\n-Decoracion\\r\\n-Mini Bar\"', '1717658016_campo.jpg', '1717658098_miguel (2).jpg', '1717658098_miguel.jpg', '2024-06-06 11:51:41', '2024-06-16 00:58:42', 'inactive'),
+(2, 'Cabaña Mexico Lindo', 'esta es nueva', 460000.00, '\"reservacion de jacuzzi\"', 'images/image1.jpg', 'images/image2.jpg', 'images/image3.jpg', '2024-06-06 12:06:04', '2024-06-16 01:03:35', 'inactive'),
+(3, 'Suite Deluxe New York', '-Cama doble - sofa cama  -Baño privado con jacuzi de hidromasajes -Wifi TV con Netflix -Aire acondicionado -Ventilador -Karaoke -Sistema Alexa -Desayuno -Botella de Vino -Piscina privada -Parqueadero privado', 815000.00, '\"Capacidad de la habitacion para personas tiene un maximo de 4, persona adicional 60,000, Ni\\u00f1os menores de 6 a\\u00f1os es gratis\"', '1718254935_habi-new.png', NULL, NULL, '2024-06-13 10:02:15', '2024-06-14 10:46:04', 'inactive');
 
 -- --------------------------------------------------------
 
@@ -288,7 +301,6 @@ ALTER TABLE `personal_access_tokens`
 --
 ALTER TABLE `reservations`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `reservations_user_id_foreign` (`user_id`),
   ADD KEY `reservations_room_id_foreign` (`room_id`);
 
 --
@@ -324,7 +336,7 @@ ALTER TABLE `jobs`
 -- AUTO_INCREMENT de la tabla `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `personal_access_tokens`
@@ -336,13 +348,13 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT de la tabla `reservations`
 --
 ALTER TABLE `reservations`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de la tabla `rooms`
 --
 ALTER TABLE `rooms`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
@@ -358,8 +370,7 @@ ALTER TABLE `users`
 -- Filtros para la tabla `reservations`
 --
 ALTER TABLE `reservations`
-  ADD CONSTRAINT `reservations_room_id_foreign` FOREIGN KEY (`room_id`) REFERENCES `rooms` (`id`) ON DELETE CASCADE,
-  ADD CONSTRAINT `reservations_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
+  ADD CONSTRAINT `reservations_room_id_foreign` FOREIGN KEY (`room_id`) REFERENCES `rooms` (`id`) ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
