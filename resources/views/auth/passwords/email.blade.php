@@ -139,7 +139,7 @@
   <div class="card">
     <div class="login-box">
       <div class="text-center mb-4">
-        <img src="{{ asset('/images/logotipo sinfondo.png') }}" alt="Logo" style="max-width: 250px;">
+        <img src="{{ asset('images/logotipo_sinfondo.png') }}" alt="Logo" style="max-width: 250px;">
       </div>
       <p class=" text-center ">{{ __('Restablecer contraseña') }}</p>
       <div class="card-body">
