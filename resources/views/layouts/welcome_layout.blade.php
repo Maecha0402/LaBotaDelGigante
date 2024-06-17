@@ -336,7 +336,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg" id="menuBarra">
         <a class="navbar-brand" href="#">
-            <img src="images/logotipo sinfondo.png" width="175" height="110" class="d-inline-block align-top" alt="Logo"> 
+            <img src="/images/logotipo sinfondo.png" width="175" height="110" class="d-inline-block align-top" alt="Logo"> 
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="background-color: white;">
             <span class="navbar-toggler-icon"></span>

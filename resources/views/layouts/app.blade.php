@@ -23,7 +23,6 @@
 
 </head>
 <style>
-        <!-- Estilos personalizados -->
     body {
         font-family: 'Nunito', sans-serif;
     }
