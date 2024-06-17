@@ -13,7 +13,7 @@
         font-family: 'Arial', sans-serif;
     }
     .cabanas-header {
-        background: url(images/cabañas-inicio.png) no-repeat center center;
+        background: url(images/cabanas-inicio.png) no-repeat center center;
         background-size: cover;
         height: 300px;
         display: flex;
@@ -75,31 +75,31 @@
     <div class="row">
         <div class="col-md-12">
             <div class="cabana-item">
-                <img src="images/cabañas1.jpg" alt="Suite Santo Domingo">
+                <img src="images/cabanas1.jpg" alt="Suite Santo Domingo">
                 <div class="cabana-content">
                     <h5>Suite Santo Domingo</h5>
                     <p>Disfruta de una estadía placentera en nuestra Suite Santo Domingo, vista la montaña con mucha magia y amor para ti.</p>
-                    <a href="{{ url('viewscabañas/santodomingo') }}" class="btn btn-primary">Ver Más</a>
+                    <a href="{{ url('viewscabanas/santodomingo') }}" class="btn btn-primary">Ver Más</a>
                 </div>
             </div>
         </div>
         <div class="col-md-12">
             <div class="cabana-item">
-                <img src="images/cabañas2.jpg" alt="Cabaña Mexico Lindo">
+                <img src="images/cabanas2.jpg" alt="Cabaña Mexico Lindo">
                 <div class="cabana-content">
                     <h5>Cabaña Mexico Lindo</h5>
                     <p>No solo las fiestas son temáticas, disfruta de una cabaña adaptada con lo típico de este país tan hermoso México.</p>
-                    <a href="{{ url('viewscabañas/mexico') }}" class="btn btn-primary">Ver Más</a>
+                    <a href="{{ url('viewscabanas/mexico') }}" class="btn btn-primary">Ver Más</a>
                 </div>
             </div>
         </div>
         <div class="col-md-12">
             <div class="cabana-item">
-                <img src="images/cabañas.jpg" alt="Suite Deluxe New York">
+                <img src="images/cabanas.jpg" alt="Suite Deluxe New York">
                 <div class="cabana-content">
                     <h5>Suite Deluxe New York</h5>
                     <p>Alojamientos con todo el estilo y tematizados para un descanso único.</p>
-                    <a href="{{ url('viewscabañas/newyork') }}" class="btn btn-primary">Ver Más</a>
+                    <a href="{{ url('viewscabanas/newyork') }}" class="btn btn-primary">Ver Más</a>
                 </div>
             </div>
         </div>
@@ -109,7 +109,7 @@
                 <div class="cabana-content">
                     <h5>Camping Bota Texa</h5>
                     <p>Vive una experiencia única y diferente durmiendo dentro de una bota gigante.</p>
-                    <a href="{{ url('viewscabañas/botatexas') }}" class="btn btn-primary">Ver Más</a>
+                    <a href="{{ url('viewscabanas/botatexas') }}" class="btn btn-primary">Ver Más</a>
                 </div>
             </div>
         </div>

@@ -169,7 +169,7 @@
 
         <div class="d-flex">
             <!-- Barra lateral -->
-            <nav class="sidebar bg-dark">
+            <!-- <nav class="sidebar bg-dark">
                 <div class="sidebar-sticky">
                     <ul class="nav flex-column">
                         <li class="nav-item">
@@ -204,7 +204,7 @@
                         </li>
                     </ul>
                 </div>
-            </nav>
+            </nav> -->
 
             <main class="main-content w-100 backg-fond">
                 <!-- Contenido principal -->

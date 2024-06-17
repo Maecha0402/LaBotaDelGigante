@@ -11,6 +11,7 @@ use App\Http\Controllers\RoomController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\DashboardReservationController;
 
+
 // Crud de reservaciones desde el dashboard
 Route::prefix('dashboard')->middleware('auth')->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
@@ -50,17 +51,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('viewscabañas/santodomingo', function () {
-    return view('viewscabañas/santodomingo');
+
+
+Route::get('viewscabanas/santodomingo', function () {
+    return view('viewscabanas/santodomingo');
 });
-Route::get('viewscabañas/botatexas', function () {
-    return view('viewscabañas/botatexas');
+Route::get('viewscabanas/botatexas', function () {
+    return view('viewscabanas/botatexas');
 });
-Route::get('viewscabañas/mexico', function () {
-    return view('viewscabañas/mexico');
+Route::get('viewscabanas/mexico', function () {
+    return view('viewscabanas/mexico');
 });
-Route::get('viewscabañas/newyork', function () {
-    return view('viewscabañas/newyork');
+Route::get('viewscabanas/newyork', function () {
+    return view('viewscabanas/newyork');
 });
 Route::get('/biblioteca', function () {
     return view('biblioteca');
